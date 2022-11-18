@@ -22,13 +22,13 @@ public class VectorCASTPublisherTest extends AbstractVectorCASTTestBase {
 		FilePath workspace = new FilePath(w);
 
 		// Create 4 files in the workspace
-		File f1 = File.createTempFile("coverage", ".xml", w);
+		File f1 = Files.createTempFile(w.toPath(), "coverage", ".xml").toFile();
 		f1.deleteOnExit();
-		File f2 = File.createTempFile("anyname", ".xml", w);
+		File f2 = Files.createTempFile(w.toPath(), "anyname", ".xml").toFile();
 		f2.deleteOnExit();
-		File f3 = File.createTempFile("coverage", ".xml", w);
+		File f3 = Files.createTempFile(w.toPath(), "coverage", ".xml").toFile();
 		f3.deleteOnExit();
-		File f4 = File.createTempFile("anyname", ".xml", w);
+		File f4 = Files.createTempFile(w.toPath(), "anyname", ".xml").toFile();
 		f4.deleteOnExit();
 
 
